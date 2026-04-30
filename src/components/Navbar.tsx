@@ -3,10 +3,11 @@ export default function Navbar() {
         <nav>
             <div>Inspiration</div>
 
-            <div>
-                <a href="#">Menu</a>
+            <div className="flex gap-6">
                 <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#">Menu</a>
+                <a href="#">Location</a>
+                <a href="#">Reserve</a>
             </div>
         </nav>
     )
