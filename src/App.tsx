@@ -1,9 +1,13 @@
 import './App.css'
+import MainLayout from './layouts/MainLayout'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
 
 export default function App() {
   return (
-    <div>
-      <h1>Restaurant Site</h1>
-    </div>
+    <MainLayout>
+      <Navbar />
+      <Home />
+    </MainLayout>
   )
 }
