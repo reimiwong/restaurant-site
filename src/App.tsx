@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import Menu from './components/Menu'
+import VisitUs from './components/VisitUs'
+import ReserveYourTable from './components/ReserveYourTable'
 
 export default function App() {
   return (
@@ -12,7 +14,8 @@ export default function App() {
       <Hero />
       <AboutUs />
       <Menu />
+      <VisitUs />
+      <ReserveYourTable />
     </MainLayout>
-    
   )
 }
