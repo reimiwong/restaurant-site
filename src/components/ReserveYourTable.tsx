@@ -1,9 +1,95 @@
+import { useState } from "react";
+
 export default function ReserveYourTable() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    time: "",
+    partySize: "2",
+    requests: "",
+  });
+
+  const inputStyle =
+    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60 font-sans text-base font-normal outline-none";
+
+  const textareaStyle =
+    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60 font-sans text-base font-normal outline-none resize-none";
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    console.log(form);
+  }
+
   return (
-  <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
-  <h2>Reservations</h2>
-  <h1>Reserve Your Table</h1>
-  <p>Experience the finest Chinese cuisine in Edinburgh. Book your table today</p>
-</div>
+    <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
+
+      <h2 className="text-[#D4AF37] text-sm tracking-[1.4px]">
+        Reservations
+      </h2>
+
+      <h1 className="font-playfair text-[60px] leading-[60px]">
+        Reserve Your Table
+      </h1>
+
+      <p className="text-white/90 text-xl leading-7">
+        Experience the finest Chinese cuisine in Edinburgh. Book your table today
+      </p>
+
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 w-[420px]"
+      >
+        <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className={inputStyle} />
+
+        <input name="email" placeholder="Email" value={form.email} onChange={handleChange} className={inputStyle} />
+
+        <input name="phone" placeholder="Phone" value={form.phone} onChange={handleChange} className={inputStyle} />
+
+        {/* Date + Time */}
+        <div className="flex gap-2">
+          <input name="date" type="date" value={form.date} onChange={handleChange} className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60" />
+
+          <input name="time" type="time" value={form.time} onChange={handleChange} className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60" />
+        </div>
+
+        <select name="partySize" value={form.partySize} onChange={handleChange} className={inputStyle}>
+          <option value="1">1 person</option>
+          <option value="2">2 people</option>
+          <option value="3">3 people</option>
+          <option value="4">4 people</option>
+          <option value="5">5 people</option>
+          <option value="6">6 people</option>
+          <option value="7+">7+ people</option>
+        </select>
+
+        <textarea
+          name="requests"
+          placeholder="Special requests"
+          value={form.requests}
+          onChange={handleChange}
+          className={textareaStyle}
+        />
+
+        <button
+          type="submit"
+          className="w-full py-4 rounded-full bg-[#D4AF37] text-black font-medium shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)]"
+        >
+          Request Reservation
+        </button>
+      </form>
+
+      <p className="text-white/80 text-center text-base leading-6">
+        For same-day reservations or groups larger than 8, please call us directly at{" "}
+        <span className="text-[#D4AF37]">0131 555 0123</span>
+      </p>
+    </div>
   );
 }
