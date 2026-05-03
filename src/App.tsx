@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
+import Menu from './components/Menu'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <AboutUs />
+      <Menu />
     </MainLayout>
     
   )
