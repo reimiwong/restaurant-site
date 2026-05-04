@@ -2,12 +2,9 @@ export default function Hero() {
   return (
     <div
       className="relative flex flex-col items-center gap-6 min-h-[700px] justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/dim-sum.webp')" }}
+      style={{ backgroundImage: "url('/dim-sum.webp')" }}
     >
-      {/* Optional: overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50"></div>
-
-      {/* Content on top */}
       <div className="relative z-10 flex flex-col items-center gap-6 text-center">
         <h2 className="text-[#D4AF37] font-sans text-sm font-normal leading-5 tracking-[1.4px] rounded-full border border-[#D4AF37] px-4 py-1">
           LEITH, EDINBURGH

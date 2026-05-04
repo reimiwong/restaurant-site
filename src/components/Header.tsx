@@ -13,13 +13,13 @@ export default function Navbar() {
               </p>
             </a>
             <div className="flex flex-col">
-          <a
-  href="/"
-  className="text-[#0A0A0A] text-2xl font-normal leading-8"
-  style={{ fontFamily: 'var(--default-font-family)' }}
->
-  Inspiration
-</a>
+              <a
+                href="/"
+                className="text-[#0A0A0A] text-2xl font-normal leading-8"
+                style={{ fontFamily: "var(--default-font-family)" }}
+              >
+                Inspiration
+              </a>
               <p className="text-[#6A7282] font-['Noto_Serif_SC'] text-xs font-normal leading-4">
                 靈感
               </p>

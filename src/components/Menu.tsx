@@ -1,56 +1,12 @@
 import MenuItemCard from "./MenuItemCard";
-
-const menuItems = [
-  {
-    title: "Sweet & Sour Chicken",
-    cn_title: "糖醋鸡",
-    price: "£12.99",
-    text: "Crispy chicken with tangy sauce.",
-    img: "sweet-sour-pork.jpg",
-  },
-  {
-    title: "Kung Pao Chicken",
-    cn_title: "宫保鸡丁",
-    price: "£13.50",
-    text: "Spicy stir-fry with peanuts.",
-    img: "kung-pao-chicken.jpg",
-  },
-  {
-    title: "Beef Noodles",
-    cn_title: "牛肉面",
-    price: "£11.00",
-    text: "Rich broth with tender beef.",
-    img: "beef-noodle.jpg",
-  },
-  {
-    title: "Handmade Dumplings",
-    cn_title: "手工餃子",
-    price: "£8.50",
-    text: "Delicate dumplings filled with pork and chive, served with black vinegar",
-    img: "dumplings.jpg",
-  },
-    {
-    title: "Roasted Duck",
-    cn_title: "擔擔麵",
-    price: "£11.00",
-    text: "Spicy Sichuan noodles with minced pork, peanuts, and scallions",
-    img: "roast-duck.webp",
-  },
-     {
-    title: "Mapo Tofu",
-    cn_title: "麻婆豆腐",
-    price: "£10.50",
-    text: "Silken tofu in a spicy, aromatic sauce with fermented black beans",
-    img: "mapo-tofu.webp",
-  }
-];
+import menuItems from "../data/menuItems";
 
 export default function Menu() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 bg-[#1A1A1A] min-h-[700px] py-12">
- <h2 className="relative text-[#D4AF37] text-center font-sans text-sm font-normal leading-5 tracking-[1.4px] after:block after:bg-[#C8102E] after:h-[2px] after:w-[143px] after:mx-auto after:mt-1">
-  SIGNATURE DISHES
-</h2>
+      <h2 className="relative text-[#D4AF37] text-center font-sans text-sm font-normal leading-5 tracking-[1.4px] after:block after:bg-[#C8102E] after:h-[2px] after:w-[143px] after:mx-auto after:mt-1">
+        SIGNATURE DISHES
+      </h2>
       <h1 className="text-white text-center font-playfair text-[60px] font-medium leading-[60px]">
         Our Menu
       </h1>

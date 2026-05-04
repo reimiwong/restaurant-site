@@ -1,6 +1,6 @@
 
 import MainLayout from './layouts/MainLayout'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import Menu from './components/Menu'
@@ -12,7 +12,7 @@ import './App.css'
 export default function App() {
   return (
     <MainLayout>
-      <Navbar />
+      <Header />
       <Hero />
       <AboutUs />
       <Menu />
