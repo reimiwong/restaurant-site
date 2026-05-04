@@ -24,12 +24,11 @@ export default function ReserveYourTable() {
 
   const inputStyle =
     "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
-
   const textareaStyle =
     "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -50,6 +49,7 @@ export default function ReserveYourTable() {
           Experience the finest Chinese cuisine in Edinburgh. Book your table
           today.
         </p>
+
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 w-full max-w-md px-4 sm:px-0"
@@ -77,20 +77,20 @@ export default function ReserveYourTable() {
           />
 
           {/* Date + Time */}
-          <div className="flex flex-col sm:flex-row gap-2">
+          <div className="flex flex-col sm:flex-row gap-2 w-full">
             <input
               name="date"
               type="date"
               value={form.date}
               onChange={handleChange}
-              className="w-full sm:w-1/2 h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
+              className="w-full sm:w-1/2 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
             />
             <input
               name="time"
               type="time"
               value={form.time}
               onChange={handleChange}
-              className="w-full sm:w-1/2 h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
+              className="w-full sm:w-1/2 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
             />
           </div>
 
