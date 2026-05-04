@@ -2,9 +2,12 @@ export default function AboutUs() {
   return (
     <div className="flex items-center justify-center gap-16 h-[700px]">
       <div className="flex flex-col gap-6 items-start justify-start w-[500px]">
-        <h1 className="text-[#C8102E] font-sans text-sm font-normal leading-5 tracking-[1.4px]">
-          About us
-        </h1>
+        <div className="flex flex-col items-start">
+  <h1 className="text-[#C8102E] font-sans text-sm font-normal leading-5 tracking-[1.4px]">
+    ABOUT US
+  </h1>
+  <div className="bg-[#D4AF37] w-[76.656px] h-[2px] mt-1"></div>
+</div>
         <h2 className="text-[#101828] font-playfair text-5xl font-medium leading-[60px]">
           Our Story
         </h2>
@@ -21,10 +24,10 @@ export default function AboutUs() {
           story. Every meal is a journey through the diverse regions of China,
           crafted with passion and served with pride.
         </p>
-        <p className="text-[#1E2939] font-playfair text-xl italic font-normal leading-7">
-          "Inspiration is not just our name—it's our promise to deliver an
-          extraordinary culinary experience with every visit."
-        </p>
+       <p className="border-l-4 border-[#C8102E] pl-4 text-[#1E2939] font-playfair text-xl italic font-normal leading-7">
+  "Inspiration is not just our name—it's our promise to deliver an
+  extraordinary culinary experience with every visit."
+</p>
       </div>
   <div className="relative w-[600px]">
   <div className="absolute inset-0 rounded-2xl bg-red-500 opacity-20 blur-3xl"></div>
