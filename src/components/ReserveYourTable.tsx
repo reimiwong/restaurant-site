@@ -1,126 +1,43 @@
-import { useState } from "react";
+// Menu.tsx
+import MenuItemCard from "./MenuItemCard";
+import menuItems from "../data/menuItems";
 
-const partySizes = [
-  { value: "1", label: "1 person" },
-  { value: "2", label: "2 people" },
-  { value: "3", label: "3 people" },
-  { value: "4", label: "4 people" },
-  { value: "5", label: "5 people" },
-  { value: "6", label: "6 people" },
-  { value: "7", label: "7 people" },
-];
-
-export default function ReserveYourTable() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    partySize: "2",
-    requests: "",
-  });
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const inputStyle =
-    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
-
-  const textareaStyle =
-    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
-
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    console.log(form);
-  }
-
+export default function Menu() {
   return (
-    <section id="reserve">
-    <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
-      <p className="text-[#D4AF37] text-sm tracking-[1.4px]">RESERVATIONS</p>
-      <h1 className="font-playfair text-[60px] leading-[60px]">Reserve Your Table</h1>
-      <p className="text-white/90 text-xl leading-7">
-        Experience the finest Chinese cuisine in Edinburgh. Book your table today.
-      </p>
+    <section id="menu">
+      <div className="flex flex-col items-center justify-center gap-6 bg-[#1A1A1A] py-12">
+        <h2 className="relative text-[#D4AF37] text-center font-sans text-sm font-normal leading-5 tracking-[1.4px] after:block after:bg-[#C8102E] after:h-[2px] after:w-[143px] after:mx-auto after:mt-1">
+          SIGNATURE DISHES
+        </h2>
+        <h1 className="text-white text-center font-playfair text-[60px] font-medium leading-[60px]">
+          Our Menu
+        </h1>
+        <p className="w-full max-w-[672px] text-[#99A1AF] text-center font-sans text-xl font-normal leading-7">
+          Discover our selection of signature dishes, crafted with authentic flavors and the finest ingredients
+        </p>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[420px]">
-        <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className={inputStyle} />
-        <input name="email" placeholder="Email" value={form.email} onChange={handleChange} className={inputStyle} />
-        <input name="phone" placeholder="Phone" value={form.phone} onChange={handleChange} className={inputStyle} />
-
-        {/* Date + Time */}
-        <div className="flex gap-2">
-          <input
-            name="date"
-            type="date"
-            value={form.date}
-            onChange={handleChange}
-            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
-          />
-          <input
-            name="time"
-            type="time"
-            value={form.time}
-            onChange={handleChange}
-            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
-          />
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {menuItems.map((item) => (
+            <MenuItemCard
+              key={item.title}
+              title={item.title}
+              cn_title={item.cn_title}
+              price={item.price}
+              text={item.text}
+              img={item.img}
+            />
+          ))}
         </div>
 
-        {/* Custom Dropdown */}
-        <div className="relative w-full">
-          <button
-            type="button"
-            className="w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50 font-sans text-base font-normal flex justify-between items-center outline-none"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            {partySizes.find((p) => p.value === form.partySize)?.label}
-            <span>▾</span>
-          </button>
+        <p className="text-[#99A1AF] text-center font-sans text-lg font-normal leading-7 mt-6">
+          View our full menu with wines, desserts & seasonal specials
+        </p>
 
-        {dropdownOpen && (
-  <ul className="absolute top-full mt-2 w-full max-h-60 overflow-y-auto rounded-2xl border-2 border-white/30 bg-[#8B0A1E] text-white z-50">
-    {partySizes.map((p) => (
-      <li
-        key={p.value}
-        onClick={() => {
-          setForm({ ...form, partySize: p.value });
-          setDropdownOpen(false);
-        }}
-        className="px-6 py-4 hover:bg-white/20 cursor-pointer"
-      >
-        {p.label}
-      </li>
-    ))}
-  </ul>
-)}
-        </div>
-
-        <textarea
-          name="requests"
-          placeholder="Special requests (Optional)"
-          value={form.requests}
-          onChange={handleChange}
-          className={textareaStyle}
-        />
-
-        <button
-          type="submit"
-          className="w-full py-4 rounded-full bg-[#D4AF37] text-black font-medium shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)]"
-        >
-          Request Reservation
+        <button className="inline-flex items-center justify-center px-[38px] pt-[14.333px] pb-[17.667px] bg-[#C8102E] text-white text-center font-sans text-base font-medium leading-6 rounded-full mt-4">
+          Download Full Menu
         </button>
-      </form>
-
-      <p className="text-white/80 text-center text-base leading-6">
-        For same-day reservations or groups larger than 8, please call us directly at{" "}
-        <span className="text-[#D4AF37]">0131 555 0123</span>
-      </p>
-    </div>
+      </div>
     </section>
   );
 }

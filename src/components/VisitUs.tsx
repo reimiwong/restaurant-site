@@ -1,39 +1,39 @@
 const headingClass =
-  "text-[#101828] font-playfair text-2xl font-medium leading-8";
+  "text-[#101828] font-playfair font-medium leading-tight sm:leading-[64px]";
 
-const textClass = "text-[#364153] font-sans text-lg font-normal leading-7";
+const textClass = "text-[#364153] font-sans font-normal leading-6 sm:leading-7";
 
 const openingHours =
-  "text-[#C8102E] font-sans text-[18px] font-normal leading-[28px]";
+  "text-[#C8102E] font-sans font-normal leading-7 sm:leading-[28px]";
 
 export default function VisitUs() {
   return (
     <section id="location" className="bg-[#F9FAFB]">
-      <div className="flex flex-col items-center gap-16 py-24">
+      <div className="flex flex-col items-center gap-12 sm:gap-16 py-16 sm:py-24 px-4 sm:px-0">
         {/* Header */}
         <div className="flex flex-col items-center gap-3 text-center max-w-[700px]">
           <h2 className="relative text-[#C8102E] text-sm font-sans tracking-[1.4px] after:block after:bg-[#D4AF37] after:h-[2px] after:w-[76px] after:mx-auto after:mt-1">
             FIND US
           </h2>
 
-          <h1 className="text-[#101828] font-playfair text-[56px] font-medium leading-[64px]">
+          <h1 className="text-[#101828] font-playfair text-3xl sm:text-4xl md:text-[56px] font-medium leading-tight sm:leading-[64px]">
             Visit Us
           </h1>
 
-          <p className="text-[#4A5565] font-sans text-xl leading-7">
+          <p className="text-[#4A5565] font-sans text-lg sm:text-xl leading-7 sm:leading-7">
             Located in the historic port of Leith, Edinburgh
           </p>
         </div>
 
         {/* Content */}
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center justify-center w-full px-4 md:px-0">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-center justify-center w-full">
           {/* Card */}
-          <div className="flex flex-col w-full md:w-[552px] p-8 gap-8 rounded-3xl border border-[#E5E7EB] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+          <div className="flex flex-col w-full max-w-[500px] md:w-[552px] p-6 sm:p-8 gap-6 sm:gap-8 rounded-3xl border border-[#E5E7EB] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.08)] sm:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
             {/* Address */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-full bg-[#C8102E] flex-shrink-0" />
-                <h2 className={headingClass}>Address</h2>
+                <h2 className={`${headingClass} text-lg sm:text-2xl`}>Address</h2>
               </div>
               <div className="flex flex-col gap-1 mt-2">
                 <p className={textClass}>45 Shore Street</p>
@@ -44,10 +44,10 @@ export default function VisitUs() {
             </div>
 
             {/* Opening Hours */}
-            <div className="border-t-[0.667px] border-[#E5E7EB] pt-6 flex flex-col gap-2">
+            <div className="border-t-[0.667px] border-[#E5E7EB] pt-4 sm:pt-6 flex flex-col gap-2">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-full bg-[#D4AF37] flex-shrink-0" />
-                <h2 className={headingClass}>Opening Hours</h2>
+                <h2 className={`${headingClass} text-lg sm:text-2xl`}>Opening Hours</h2>
               </div>
               <div className="flex flex-col gap-2 mt-2">
                 <div className="flex justify-between w-full">
@@ -66,28 +66,25 @@ export default function VisitUs() {
             </div>
 
             {/* Contact */}
-            <div className="border-t-[0.667px] border-[#E5E7EB] pt-6 flex flex-col gap-2">
+            <div className="border-t-[0.667px] border-[#E5E7EB] pt-4 sm:pt-6 flex flex-col gap-2">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-full bg-[#C8102E] flex-shrink-0" />
-                <h2 className={headingClass}>Contact</h2>
+                <h2 className={`${headingClass} text-lg sm:text-2xl`}>Contact</h2>
               </div>
               <div className="flex flex-col gap-1 mt-2">
                 <p className={textClass}>
                   Phone: <span className={openingHours}>0131 55 0123</span>
                 </p>
                 <p className={textClass}>
-                  Email:{" "}
-                  <span className={openingHours}>
-                    hello@inspiration-leith.co.uk
-                  </span>
+                  Email: <span className={openingHours}>hello@inspiration-leith.co.uk</span>
                 </p>
               </div>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative w-full md:w-[530px] h-[530px] flex-shrink-0">
-            <div className="absolute inset-0 rounded-3xl opacity-20 blur-[28px] bg-[linear-gradient(135deg,#C8102E_0%,#D4AF37_100%)]" />
+          <div className="relative w-full max-w-[400px] sm:max-w-[480px] md:w-[530px] h-[300px] sm:h-[400px] md:h-[530px] flex-shrink-0">
+            <div className="absolute inset-0 rounded-3xl opacity-10 sm:opacity-20 blur-[16px] sm:blur-[28px] bg-[linear-gradient(135deg,#C8102E_0%,#D4AF37_100%)]" />
             <img
               src="leith.jpg"
               alt="Leith, Edinburgh"
