@@ -41,8 +41,8 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="w-full flex md:justify-center">
             <div className="flex flex-col items-start md:mx-auto">
-              <p className="text-[#D4AF37] text-lg font-medium mb-4">Quick Links</p>
-              <ul className="flex flex-col gap-2">
+              <p className="text-[#D4AF37] text-lg font-medium mb-1">Quick Links</p>
+              <ul className="flex flex-col gap-1">
                 <li><a href="#about-us" className="hover:text-[#D4AF37]">About Us</a></li>
                 <li><a href="#menu" className="hover:text-[#D4AF37]">Our Menu</a></li>
                 <li><a href="#location" className="hover:text-[#D4AF37]">Location</a></li>
@@ -54,8 +54,8 @@ export default function Footer() {
           {/* Column 3: Connect & Contact */}
           <div className="w-full flex md:justify-center">
             <div className="flex flex-col items-start md:mx-auto">
-              <p className="text-[#D4AF37] text-lg font-medium mb-4">Connect</p>
-              <ul className="flex flex-col gap-2">
+              <p className="text-[#D4AF37] text-lg font-medium mb-1">Connect</p>
+              <ul className="flex flex-col gap-1">
                 <li><a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37]">Instagram</a></li>
                 <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37]">Facebook</a></li>
                 <li><a href="https://www.tripadvisor.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37]">Trip Advisor</a></li>
