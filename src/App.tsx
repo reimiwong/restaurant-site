@@ -1,4 +1,4 @@
-import './App.css'
+
 import MainLayout from './layouts/MainLayout'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import VisitUs from './components/VisitUs'
 import ReserveYourTable from './components/ReserveYourTable'
 import Footer from './components/Footer'
+import './App.css'
 
 export default function App() {
   return (

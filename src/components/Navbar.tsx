@@ -13,12 +13,13 @@ export default function Navbar() {
               </p>
             </a>
             <div className="flex flex-col">
-              <a
-                href="/"
-                className="text-[#0A0A0A] font-['Playfair_Display'] text-2xl font-normal leading-8"
-              >
-                Inspiration
-              </a>
+          <a
+  href="/"
+  className="text-[#0A0A0A] text-2xl font-normal leading-8"
+  style={{ fontFamily: 'var(--default-font-family)' }}
+>
+  Inspiration
+</a>
               <p className="text-[#6A7282] font-['Noto_Serif_SC'] text-xs font-normal leading-4">
                 靈感
               </p>
@@ -45,7 +46,7 @@ export default function Navbar() {
             </a>
             <a
               href="#"
-              className="bg-[#C8102E] text-white font-sans text-base font-normal leading-6 rounded-full px-6 py-2"
+              className="bg-[#C8102E] text-white text-base font-normal leading-6 rounded-full px-6 py-2 cursor-pointer hover:bg-red-700 active:scale-95 transition-all duration-150"
             >
               Reserve
             </a>

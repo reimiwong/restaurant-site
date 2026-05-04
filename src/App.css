@@ -1,0 +1,46 @@
+:root {
+  --default-font-family: 'Playfair Display', serif;
+}
+
+
+/* Apply interactive styles to all buttons, inputs, and links */
+button,
+input[type="button"],
+input[type="submit"],
+a {
+  cursor: pointer;               
+  transition: all 0.15s ease;   
+  transform: translateZ(0);      
+  font-family: Inter
+  
+}
+
+p {
+      font-family: Inter
+}
+
+/* Hover effect */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+a:hover {
+  filter: brightness(1.1);       
+}
+
+/* Active / click effect */
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+a:active {
+  transform: scale(0.95);        
+  filter: brightness(0.9);       
+}
+
+/* Focus outline only for keyboard users */
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+a:focus-visible {
+  outline: 2px solid #FACC15;    /* yellow, visible only for keyboard users */
+  outline-offset: 2px;
+}
