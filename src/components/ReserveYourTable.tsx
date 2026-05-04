@@ -23,9 +23,10 @@ export default function ReserveYourTable() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const inputStyle =
-    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
+    "w-full h-[60px] px-3 sm:px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
+
   const textareaStyle =
-    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
+    "w-full h-[132px] px-3 sm:px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -40,19 +41,18 @@ export default function ReserveYourTable() {
 
   return (
     <section id="reserve">
-      <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
+      <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-16 sm:py-24 flex flex-col items-center text-center gap-6 px-4">
         <p className="text-[#D4AF37] text-sm tracking-[1.4px]">RESERVATIONS</p>
-        <h1 className="font-playfair text-[60px] leading-[60px]">
+        <h1 className="font-playfair text-[50px] sm:text-[60px] leading-[50px] sm:leading-[60px]">
           Reserve Your Table
         </h1>
-        <p className="text-white/90 text-xl leading-7">
-          Experience the finest Chinese cuisine in Edinburgh. Book your table
-          today.
+        <p className="text-white/90 text-lg sm:text-xl leading-6 sm:leading-7 max-w-[480px] mx-auto">
+          Experience the finest Chinese cuisine in Edinburgh. Book your table today.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 w-full max-w-md px-4 sm:px-0"
+          className="flex flex-col gap-4 w-full max-w-md mx-auto"
         >
           <input
             name="name"
@@ -98,7 +98,7 @@ export default function ReserveYourTable() {
           <div className="relative w-full">
             <button
               type="button"
-              className="w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50 font-sans text-base font-normal flex justify-between items-center outline-none"
+              className="w-full h-[60px] px-3 sm:px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50 font-sans text-base font-normal flex justify-between items-center outline-none"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               {partySizes.find((p) => p.value === form.partySize)?.label}
@@ -140,8 +140,8 @@ export default function ReserveYourTable() {
         </form>
 
         <p className="text-white/80 text-center text-base sm:text-lg leading-7 sm:leading-8 max-w-[480px] mx-auto mt-6 px-2 sm:px-0">
-          For same-day reservations or groups larger than 8, please call us
-          directly at <span className="text-[#D4AF37]">0131 555 0123</span>
+          For same-day reservations or groups larger than 8, please call us directly at{" "}
+          <span className="text-[#D4AF37]">0131 555 0123</span>
         </p>
       </div>
     </section>
