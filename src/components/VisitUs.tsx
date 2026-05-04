@@ -85,7 +85,7 @@ export default function VisitUs() {
         <div className="relative w-[530px] h-[530px]">
           <div className="absolute inset-0 rounded-2xl opacity-20 blur-[24px] bg-[linear-gradient(135deg,#C8102E_0%,#D4AF37_100%)]" />
           <img
-            src="leith2.jpg"
+            src="leith.jpg"
             alt="Leith, Edinburgh"
             className="relative w-full h-full object-cover rounded-lg"
           />

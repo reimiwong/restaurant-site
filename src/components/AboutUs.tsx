@@ -33,7 +33,7 @@ export default function AboutUs() {
   <div className="absolute inset-0 rounded-2xl bg-red-500 opacity-20 blur-3xl"></div>
 
   <img
-    src="/inspiration2.jpg"
+    src="/inspiration.jpg"
     className="relative w-full h-auto rounded-2xl"
     alt="Inspiration"
   />

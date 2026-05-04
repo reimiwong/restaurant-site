@@ -6,7 +6,7 @@ export default function Footer() {
         className="w-full h-[4px]"
         style={{
           background:
-            'linear-gradient(90deg, #C8102E 0%, #CC3830 7.14%, #CF5132 14.29%, #D26633 21.43%, #D47935 28.57%, #D58C36 35.71%, #D59E36 42.86%, #D4AF37 50%, #D59E36 57.14%, #D58C36 64.29%, #D47935 71.43%, #D26633 78.57%, #CF5132 85.71%, #CC3830 92.86%, #C8102E 100%)',
+            "linear-gradient(90deg, #C8102E 0%, #CC3830 7.14%, #CF5132 14.29%, #D26633 21.43%, #D47935 28.57%, #D58C36 35.71%, #D59E36 42.86%, #D4AF37 50%, #D59E36 57.14%, #D58C36 64.29%, #D47935 71.43%, #D26633 78.57%, #CF5132 85.71%, #CC3830 92.86%, #C8102E 100%)",
         }}
       />
 
@@ -33,7 +33,7 @@ export default function Footer() {
                 </h2>
               </div>
             </div>
-            <p className="text-[#99A1AF] font-sans text-base font-normal leading-6 mt-2">
+            <p className="text-[#99A1AF] font-sans text-base font-normal leading-6 mt-2 max-w-[448px] break-words">
               Authentic Chinese cuisine in the heart of Leith, Edinburgh. Where
               tradition meets innovation.
             </p>
