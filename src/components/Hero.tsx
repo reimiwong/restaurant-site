@@ -31,12 +31,19 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <button className="inline-flex items-center justify-center px-9 py-4 bg-[#C8102E] rounded-full text-white hover:bg-red-700 transition">
-            Explore Menu
-          </button>
-          <button className="inline-flex items-center justify-center px-9 py-4 border-2 border-[#D4AF37] rounded-full text-[#D4AF37] hover:bg-[#D4AF37]/10 transition">
-            Reserve Table
-          </button>
+          <a
+  href="#menu"
+  className="inline-flex items-center justify-center px-9 py-4 bg-[#C8102E] rounded-full text-white hover:bg-red-700 transition"
+>
+  Explore Menu
+</a>
+
+<a
+  href="#reserve"
+  className="inline-flex items-center justify-center px-9 py-4 border-2 border-[#D4AF37] rounded-full text-[#D4AF37] hover:bg-[#D4AF37]/10 transition"
+>
+  Reserve Table
+</a>
         </div>
       </div>
     </div>
