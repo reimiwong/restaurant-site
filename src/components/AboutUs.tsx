@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section id="about-us">
+    <section id="about-us" className="bg-[#F9FAFB]">
       <div className="flex items-center justify-center gap-16 h-[700px]">
         <div className="flex flex-col gap-6 items-start justify-start w-[500px]">
           <div className="flex flex-col items-start">
@@ -31,13 +31,13 @@ export default function AboutUs() {
           </p>
         </div>
         <div className="relative w-[600px]">
-          <div className="absolute inset-0 rounded-2xl bg-red-500 opacity-20 blur-3xl"></div>
+        <div className="absolute inset-0 rounded-2xl bg-red-500 opacity-10 blur-2xl"></div>
 
-          <img
-            src="/inspiration.jpg"
-            className="relative w-full h-auto rounded-2xl"
-            alt="Inspiration"
-          />
+<img
+  src="/inspiration.jpg"
+  className="relative w-full h-auto rounded-2xl"
+  alt="Inspiration"
+/>
         </div>
       </div>
     </section>

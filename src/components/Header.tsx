@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <section id="header">
+    <section id="header" className="bg-[#F9FAFB]">
       <div className="flex flex-col items-start w-full max-w-screen-3xl mx-auto px-80 h-20 ">
         <nav className="flex flex-col items-start self-stretch shrink-0 h-[84px] px-6 pt-5 pb-0">
           <div className="flex items-center justify-between h-11 pr-0 self-stretch shrink-0">

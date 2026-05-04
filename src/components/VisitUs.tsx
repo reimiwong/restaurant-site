@@ -8,29 +8,29 @@ const openingHours =
 
 export default function VisitUs() {
   return (
-    <section id="location">
-      <div className="flex flex-col items-center gap-12 py-24">
+    <section id="location" className="bg-[#F9FAFB]">
+      <div className="flex flex-col items-center gap-16 py-24">
         {/* Header */}
-        <div className="flex flex-col items-center gap-2">
-          <h2 className="relative text-[#C8102E] text-center font-sans text-sm tracking-[1.4px] after:block after:bg-[#D4AF37] after:h-[2px] after:w-[76.656px] after:mx-auto after:mt-1">
+        <div className="flex flex-col items-center gap-3 text-center max-w-[700px]">
+          <h2 className="relative text-[#C8102E] text-sm font-sans tracking-[1.4px] after:block after:bg-[#D4AF37] after:h-[2px] after:w-[76px] after:mx-auto after:mt-1">
             FIND US
           </h2>
 
-          <h1 className="text-[#101828] text-center font-playfair text-[60px] font-medium leading-[60px]">
+          <h1 className="text-[#101828] font-playfair text-[56px] font-medium leading-[64px]">
             Visit Us
           </h1>
 
-          <p className="text-[#4A5565] text-center font-sans text-xl leading-7">
+          <p className="text-[#4A5565] font-sans text-xl leading-7">
             Located in the historic port of Leith, Edinburgh
           </p>
         </div>
 
         {/* Content */}
-        <div className="flex gap-16 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center justify-center w-full px-4 md:px-0">
           {/* Card */}
-          <div className="flex flex-col w-[552px] p-8 gap-8 rounded-2xl border border-[#F3F4F6] bg-white shadow-lg">
+          <div className="flex flex-col w-full md:w-[552px] p-8 gap-8 rounded-3xl border border-[#E5E7EB] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
             {/* Address */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-full bg-[#C8102E] flex-shrink-0" />
                 <h2 className={headingClass}>Address</h2>
@@ -86,12 +86,12 @@ export default function VisitUs() {
           </div>
 
           {/* Image */}
-          <div className="relative w-[530px] h-[530px]">
-            <div className="absolute inset-0 rounded-2xl opacity-20 blur-[24px] bg-[linear-gradient(135deg,#C8102E_0%,#D4AF37_100%)]" />
+          <div className="relative w-full md:w-[530px] h-[530px] flex-shrink-0">
+            <div className="absolute inset-0 rounded-3xl opacity-20 blur-[28px] bg-[linear-gradient(135deg,#C8102E_0%,#D4AF37_100%)]" />
             <img
               src="leith.jpg"
               alt="Leith, Edinburgh"
-              className="relative w-full h-full object-cover rounded-lg"
+              className="relative w-full h-full object-cover rounded-2xl shadow-lg"
             />
           </div>
         </div>

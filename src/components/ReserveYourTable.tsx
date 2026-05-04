@@ -26,7 +26,7 @@ export default function ReserveYourTable() {
     "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
 
   const textareaStyle =
-    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-whitefont-sans text-base font-normal outline-none resize-none";
+    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -60,14 +60,14 @@ export default function ReserveYourTable() {
             type="date"
             value={form.date}
             onChange={handleChange}
-            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60"
+            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
           />
           <input
             name="time"
             type="time"
             value={form.time}
             onChange={handleChange}
-            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60"
+            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
           />
         </div>
 
@@ -75,7 +75,7 @@ export default function ReserveYourTable() {
         <div className="relative w-full">
           <button
             type="button"
-            className="w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/80 font-sans text-base font-normal flex justify-between items-center outline-none"
+            className="w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50 font-sans text-base font-normal flex justify-between items-center outline-none"
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             {partySizes.find((p) => p.value === form.partySize)?.label}
@@ -102,7 +102,7 @@ export default function ReserveYourTable() {
 
         <textarea
           name="requests"
-          placeholder="Special requests"
+          placeholder="Special requests (Optional)"
           value={form.requests}
           onChange={handleChange}
           className={textareaStyle}
