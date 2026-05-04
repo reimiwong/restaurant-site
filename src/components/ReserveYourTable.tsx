@@ -23,10 +23,10 @@ export default function ReserveYourTable() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const inputStyle =
-    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/80 font-sans text-base font-normal outline-none";
+    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
 
   const textareaStyle =
-    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60 font-sans text-base font-normal outline-none resize-none";
+    "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-whitefont-sans text-base font-normal outline-none resize-none";
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

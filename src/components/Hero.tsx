@@ -5,7 +5,7 @@ export default function Hero() {
         style={{ backgroundImage: "url('/dim-sum.webp')" }}
     >
       {/* Optional: overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content on top */}
       <div className="relative z-10 flex flex-col items-center gap-6 text-center">

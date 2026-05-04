@@ -48,9 +48,9 @@ const menuItems = [
 export default function Menu() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 bg-[#1A1A1A] min-h-[700px] py-12">
-      <h2 className="text-[#D4AF37] text-center font-sans text-sm font-normal leading-5 tracking-[1.4px]">
-        Signature Dishes
-      </h2>
+ <h2 className="relative text-[#D4AF37] text-center font-sans text-sm font-normal leading-5 tracking-[1.4px] after:block after:bg-[#C8102E] after:h-[2px] after:w-[143px] after:mx-auto after:mt-1">
+  SIGNATURE DISHES
+</h2>
       <h1 className="text-white text-center font-playfair text-[60px] font-medium leading-[60px]">
         Our Menu
       </h1>
