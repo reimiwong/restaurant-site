@@ -87,7 +87,7 @@ export default function VisitUs() {
 
   {/* image on top */}
   <img
-    src="leith.jpg"
+    src="leith2.jpg"
     alt="Leith, Edinburgh"
     className="relative w-full h-full object-cover rounded-lg"
   />

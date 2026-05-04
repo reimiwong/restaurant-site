@@ -6,6 +6,7 @@ import AboutUs from './components/AboutUs'
 import Menu from './components/Menu'
 import VisitUs from './components/VisitUs'
 import ReserveYourTable from './components/ReserveYourTable'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Menu />
       <VisitUs />
       <ReserveYourTable />
+      <Footer />
     </MainLayout>
   )
 }

@@ -1,5 +1,15 @@
 import { useState } from "react";
 
+const partySizes = [
+  { value: "1", label: "1 person" },
+  { value: "2", label: "2 people" },
+  { value: "3", label: "3 people" },
+  { value: "4", label: "4 people" },
+  { value: "5", label: "5 people" },
+  { value: "6", label: "6 people" },
+  { value: "7", label: "7 people" },
+];
+
 export default function ReserveYourTable() {
   const [form, setForm] = useState({
     name: "",
@@ -10,15 +20,16 @@ export default function ReserveYourTable() {
     partySize: "2",
     requests: "",
   });
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const inputStyle =
-    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60 font-sans text-base font-normal outline-none";
+    "w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/80 font-sans text-base font-normal outline-none";
 
   const textareaStyle =
     "w-full h-[132px] px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60 font-sans text-base font-normal outline-none resize-none";
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -30,45 +41,63 @@ export default function ReserveYourTable() {
 
   return (
     <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
-
-      <h2 className="text-[#D4AF37] text-sm tracking-[1.4px]">
-        Reservations
-      </h2>
-
-      <h1 className="font-playfair text-[60px] leading-[60px]">
-        Reserve Your Table
-      </h1>
-
+      <h2 className="text-[#D4AF37] text-sm tracking-[1.4px]">Reservations</h2>
+      <h1 className="font-playfair text-[60px] leading-[60px]">Reserve Your Table</h1>
       <p className="text-white/90 text-xl leading-7">
         Experience the finest Chinese cuisine in Edinburgh. Book your table today
       </p>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 w-[420px]"
-      >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[420px]">
         <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className={inputStyle} />
-
         <input name="email" placeholder="Email" value={form.email} onChange={handleChange} className={inputStyle} />
-
         <input name="phone" placeholder="Phone" value={form.phone} onChange={handleChange} className={inputStyle} />
 
         {/* Date + Time */}
         <div className="flex gap-2">
-          <input name="date" type="date" value={form.date} onChange={handleChange} className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60" />
-
-          <input name="time" type="time" value={form.time} onChange={handleChange} className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60" />
+          <input
+            name="date"
+            type="date"
+            value={form.date}
+            onChange={handleChange}
+            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60"
+          />
+          <input
+            name="time"
+            type="time"
+            value={form.time}
+            onChange={handleChange}
+            className="w-full h-[60px] px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/60"
+          />
         </div>
 
-        <select name="partySize" value={form.partySize} onChange={handleChange} className={inputStyle}>
-          <option value="1">1 person</option>
-          <option value="2">2 people</option>
-          <option value="3">3 people</option>
-          <option value="4">4 people</option>
-          <option value="5">5 people</option>
-          <option value="6">6 people</option>
-          <option value="7+">7+ people</option>
-        </select>
+        {/* Custom Dropdown */}
+        <div className="relative w-full">
+          <button
+            type="button"
+            className="w-full h-[60px] px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white/80 font-sans text-base font-normal flex justify-between items-center outline-none"
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+          >
+            {partySizes.find((p) => p.value === form.partySize)?.label}
+            <span>▾</span>
+          </button>
+
+        {dropdownOpen && (
+  <ul className="absolute top-full mt-2 w-full max-h-60 overflow-y-auto rounded-2xl border-2 border-white/30 bg-[#8B0A1E] text-white z-50">
+    {partySizes.map((p) => (
+      <li
+        key={p.value}
+        onClick={() => {
+          setForm({ ...form, partySize: p.value });
+          setDropdownOpen(false);
+        }}
+        className="px-6 py-4 hover:bg-white/20 cursor-pointer"
+      >
+        {p.label}
+      </li>
+    ))}
+  </ul>
+)}
+        </div>
 
         <textarea
           name="requests"

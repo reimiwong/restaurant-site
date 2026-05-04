@@ -6,21 +6,21 @@ const menuItems = [
     cn_title: "糖醋鸡",
     price: "£12.99",
     text: "Crispy chicken with tangy sauce.",
-    img: "dumplings.jpg",
+    img: "sweet-sour-pork.jpg",
   },
   {
     title: "Kung Pao Chicken",
     cn_title: "宫保鸡丁",
     price: "£13.50",
     text: "Spicy stir-fry with peanuts.",
-    img: "dumplings.jpg",
+    img: "kung-pao-chicken.jpg",
   },
   {
     title: "Beef Noodles",
     cn_title: "牛肉面",
     price: "£11.00",
     text: "Rich broth with tender beef.",
-    img: "dumplings.jpg",
+    img: "beef-noodle.jpg",
   },
   {
     title: "Handmade Dumplings",
@@ -30,18 +30,18 @@ const menuItems = [
     img: "dumplings.jpg",
   },
     {
-    title: "Dan Dan Noodles",
+    title: "Roasted Duck",
     cn_title: "擔擔麵",
     price: "£11.00",
     text: "Spicy Sichuan noodles with minced pork, peanuts, and scallions",
-    img: "dumplings.jpg",
+    img: "roast-duck.webp",
   },
      {
     title: "Mapo Tofu",
     cn_title: "麻婆豆腐",
     price: "£10.50",
     text: "Silken tofu in a spicy, aromatic sauce with fermented black beans",
-    img: "dumplings.jpg",
+    img: "mapo-tofu.webp",
   }
 ];
 
