@@ -23,10 +23,10 @@ export default function ReserveYourTable() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const inputStyle =
-    "w-full h-[60px] px-3 sm:px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none";
+    "w-full h-[60px] px-3 sm:px-6 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none min-w-0";
 
   const textareaStyle =
-    "w-full h-[132px] px-3 sm:px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none";
+    "w-full h-[132px] px-3 sm:px-6 py-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white font-sans text-base font-normal outline-none resize-none min-w-0";
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -83,14 +83,14 @@ export default function ReserveYourTable() {
               type="date"
               value={form.date}
               onChange={handleChange}
-              className="w-full sm:w-1/2 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
+              className="flex-1 min-w-0 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
             />
             <input
               name="time"
               type="time"
               value={form.time}
               onChange={handleChange}
-              className="w-full sm:w-1/2 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
+              className="flex-1 min-w-0 h-[60px] px-3 sm:px-4 rounded-2xl border-2 border-white/30 bg-white/10 text-white/50"
             />
           </div>
 
