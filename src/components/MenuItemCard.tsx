@@ -9,9 +9,10 @@ type MenuItemCardProps = {
 
 export default function MenuItemCard({ title, cn_title, price, text, img }: MenuItemCardProps) {
   return (
-    <div className="w-[90vw] sm:w-full max-w-[405px] bg-black rounded-3xl sm:rounded-lg overflow-hidden mx-auto">
+    <div className="w-[90vw] sm:w-full max-w-[405px] bg-black rounded-3xl sm:rounded-lg overflow-hidden mx-auto
+                    shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
       {/* Image */}
-      <div className="w-full aspect-[405/256]">
+      <div className="w-full aspect-[405/256] overflow-hidden">
         <img
           src={img}
           alt={title}
@@ -30,7 +31,7 @@ export default function MenuItemCard({ title, cn_title, price, text, img }: Menu
             {text}
           </p>
         </div>
-        <p className="text-[#D4AF37] font-sans text-xl font-normal leading-7 flex-shrink-0">
+        <p className="text-[#D4AF37] font-sans text-xl font-normal leading-7 flex-shrink-0 mt-4 sm:mt-0">
           {price}
         </p>
       </div>
