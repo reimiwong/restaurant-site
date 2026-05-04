@@ -46,7 +46,7 @@ export default function Navbar() {
                 Location
               </a>
               <a
-                href="#"
+                href="#reserve"
                 className="bg-[#C8102E] text-white text-base font-normal leading-6 rounded-full px-6 py-2 cursor-pointer hover:bg-red-700 active:scale-95 transition-all duration-150"
               >
                 Reserve

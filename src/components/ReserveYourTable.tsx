@@ -45,7 +45,7 @@ export default function ReserveYourTable() {
       <p className="text-[#D4AF37] text-sm tracking-[1.4px]">RESERVATIONS</p>
       <h1 className="font-playfair text-[60px] leading-[60px]">Reserve Your Table</h1>
       <p className="text-white/90 text-xl leading-7">
-        Experience the finest Chinese cuisine in Edinburgh. Book your table today
+        Experience the finest Chinese cuisine in Edinburgh. Book your table today.
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[420px]">
