@@ -40,6 +40,7 @@ export default function ReserveYourTable() {
   }
 
   return (
+    <section id="reserve">
     <div className="bg-[linear-gradient(135deg,#C8102E,#8B0A1E)] text-white py-24 flex flex-col items-center text-center gap-6">
       <p className="text-[#D4AF37] text-sm tracking-[1.4px]">RESERVATIONS</p>
       <h1 className="font-playfair text-[60px] leading-[60px]">Reserve Your Table</h1>
@@ -120,5 +121,6 @@ export default function ReserveYourTable() {
         <span className="text-[#D4AF37]">0131 555 0123</span>
       </p>
     </div>
+    </section>
   );
 }

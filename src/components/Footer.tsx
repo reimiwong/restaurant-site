@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2 items-start text-left">
             <div className="flex flex-row gap-3 items-center">
               <a
-                href="/"
+                href="#header"
                 className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#C8102E] text-white"
               >
                 <p className="text-white font-['Noto_Serif_SC'] text-xs font-normal leading-4">
@@ -49,23 +49,23 @@ export default function Footer() {
                 Quick Links
               </p>
               <li>
-                <a href="/about-us" className="text-white hover:text-[#D4AF37]">
+                <a href="#about-us" className="text-white hover:text-[#D4AF37]">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/menu" className="text-white hover:text-[#D4AF37]">
+                <a href="#menu" className="text-white hover:text-[#D4AF37]">
                   Our Menu
                 </a>
               </li>
               <li>
-                <a href="/location" className="text-white hover:text-[#D4AF37]">
+                <a href="/#location" className="text-white hover:text-[#D4AF37]">
                   Location
                 </a>
               </li>
               <li>
                 <a
-                  href="/reservation"
+                  href="#reserve"
                   className="text-white hover:text-[#D4AF37]"
                 >
                   Reservation

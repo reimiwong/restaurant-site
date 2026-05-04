@@ -19,6 +19,10 @@ p {
       font-family: Inter
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hover effect */
 button:hover,
 input[type="button"]:hover,
