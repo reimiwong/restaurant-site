@@ -58,15 +58,27 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <a href="#" className="text-[#364153] text-base">
+          <a
+            href="#about-us"
+            className="relative text-[#364153] text-base after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#C8102E] after:transition-all after:duration-300 hover:after:w-full"
+          >
             About
           </a>
-          <a href="#" className="text-[#364153] text-base">
+
+          <a
+            href="#menu"
+            className="relative text-[#364153] text-base after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#C8102E] after:transition-all after:duration-300 hover:after:w-full"
+          >
             Menu
           </a>
-          <a href="#" className="text-[#364153] text-base">
+
+          <a
+            href="#location"
+            className="relative text-[#364153] text-base after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#C8102E] after:transition-all after:duration-300 hover:after:w-full"
+          >
             Location
           </a>
+
           <a
             href="#reserve"
             className="bg-[#C8102E] text-white text-base rounded-full px-4 py-2 hover:bg-red-700 active:scale-95 transition-all duration-150"
