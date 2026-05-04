@@ -1,14 +1,14 @@
 export default function Hero() {
   return (
     <div
-      className="relative flex flex-col items-center justify-center min-h-[70vh] sm:min-h-[700px] bg-cover bg-center"
+      className="relative flex flex-col justify-center min-h-screen max-h-[900px] bg-cover bg-center"
       style={{ backgroundImage: "url('/dim-sum.webp')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 text-center px-4 sm:px-0">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-0 py-12 sm:py-16 lg:py-20 gap-4 sm:gap-6">
         {/* Location tag */}
         <h2 className="text-[#D4AF37] font-sans text-xs sm:text-sm font-normal leading-5 tracking-[1.4px] rounded-full border border-[#D4AF37] px-3 py-1">
           LEITH, EDINBURGH
@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <button className="inline-flex items-center justify-center px-9 py-4 bg-[#C8102E] rounded-full text-white hover:bg-red-700 transition">
             Explore Menu
           </button>
