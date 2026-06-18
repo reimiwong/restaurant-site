@@ -7,7 +7,7 @@ The idea came from something personal — my parents used to own a restaurant, a
 
 ## Screenshot
 
-![Restaurant Website Homepage](screenshot/homepage.png)
+![Restaurant Website Homepage](screenshots/homepage.png)
 
 ## Tech Stack
 - React
