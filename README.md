@@ -1,9 +1,9 @@
 # Restaurant Website
 
 ## Overview
-I built this project to practise front-end development using React and TypeScript.
+I built this project to practise front-end development.
 
-The idea came from something personal — my parents used to own a restaurant, and when I was younger I always wanted to build a website for it. The restaurant is closed now, but I thought it would be a good way to learn while building something meaningful to me.
+The idea came from something personal - my parents used to own a restaurant, and when I was younger I always wanted to build a website for it. The restaurant is closed now, but I thought it would be a good way to learn while building something meaningful to me.
 
 ## Screenshot
 
@@ -13,6 +13,7 @@ The idea came from something personal — my parents used to own a restaurant, a
 - React
 - TypeScript
 - Vite
+- Tailwind
 
 ## Features
 - Basic restaurant UI layout
