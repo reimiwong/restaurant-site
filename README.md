@@ -5,14 +5,14 @@ I built this project to practise front-end development using React and TypeScrip
 
 The idea came from something personal — my parents used to own a restaurant, and when I was younger I always wanted to build a website for it. The restaurant is closed now, but I thought it would be a good way to learn while building something meaningful to me.
 
----
+## Screenshot
+
+![Restaurant Website Homepage](screenshot/homepage.png)
 
 ## Tech Stack
 - React
 - TypeScript
 - Vite
-
----
 
 ## Features
 - Basic restaurant UI layout
@@ -20,15 +20,8 @@ The idea came from something personal — my parents used to own a restaurant, a
 - Component-based structure using React
 - Fast dev setup with Vite
 
----
-
 ## Running the project
 
 ```bash
 npm install
 npm run dev
-
-## Screenshots
-
-![Homepage](./screenshots/homepage.png)
-```
