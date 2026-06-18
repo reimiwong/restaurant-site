@@ -27,3 +27,8 @@ The idea came from something personal — my parents used to own a restaurant, a
 ```bash
 npm install
 npm run dev
+
+## Screenshots
+
+![Homepage](./screenshots/homepage.png)
+```
